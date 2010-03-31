@@ -1,0 +1,9 @@
+Sorollet is a monophonic additive synth written in C++.
+
+It can be used either as an VST instrument or embedded in an stand-alone player, useful for 64k intros.
+
+An exporter from Renoise is also included, so that songs can be composed with Renoise and exported to .h
+
+If you have any suggestion or want to collaborate with new features/improvements, do get in touch :-)
+
+
