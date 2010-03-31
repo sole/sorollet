@@ -1,0 +1,5 @@
+src/libs/vst-sdk/pluginterfaces/vst2.x/aeffect.h
+src/libs/vst-sdk/pluginterfaces/vst2.x/aeffect_original.h
+src/libs/vst-sdk/pluginterfaces/vst2.x/aeffectx.h
+src/libs/vst-sdk/pluginterfaces/vst2.x/vstfxstore.h
+src/libs/vst-sdk/public.sdk/

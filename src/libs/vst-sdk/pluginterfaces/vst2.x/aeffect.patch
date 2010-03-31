@@ -1,0 +1,19 @@
+--- aeffect_original.h	2010-03-07 22:20:56.000000000 +0000
++++ aeffect.h	2010-03-07 22:20:56.000000000 +0000
+@@ -34,9 +34,13 @@
+ 	#define VSTCALLBACK
+ #elif defined __BORLANDC__
+ 	#pragma -a8
+-#elif defined(__GNUC__)
+-    #pragma pack(push,8)
+-    #define VSTCALLBACK __cdecl
++#elif defined(__GNUC__)
++	#pragma pack(push,8)
++	#if defined(__linux__)
++		#define VSTCALLBACK
++	#else
++		#define VSTCALLBACK __cdecl
++	#endif
+ #elif defined(WIN32) || defined(__FLAT__) || defined CBUILDER
+ 	#pragma pack(push)
+ 	#pragma pack(8)
