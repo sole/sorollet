@@ -1,9 +1,85 @@
+
+
+
+                 _ _  _ _ || _ _|_
+_______________ _\(_)| (_)||(/_ | _______________________________________
+
+
+
+
+
+_______________ WHAT IS IT? 
+
+
 Sorollet is a monophonic additive synth written in C++.
 
-It can be used either as an VST instrument or embedded in an stand-alone player, useful for 64k intros.
+It can be used either as an VST instrument or embedded in an stand-alone
+player, useful for 64k intros.
 
-An exporter from Renoise is also included, so that songs can be composed with Renoise and exported to .h
+An exporter from Renoise is also included, so that songs can be composed
+with Renoise and exported to .h
 
-If you have any suggestion or want to collaborate with new features/improvements, do get in touch :-)
+If you have any suggestion or want to collaborate with new 
+features/improvements, do get in touch :-)
+
+
+
+
+_______________ HOW CAN I USE IT? IS THERE ANY RESTRICTION?
+
+
+The source code is placed under a GPL v3 license. Since most of the code
+is based on publicly available ideas, I think it's the only way to re-pay
+the generous authors who have been as kind as to publish their
+contributions before.
+
+In other words: if you release something with this code, release the source
+code for all us to enjoy it and (why not?) improve it too.
+
+Full license text is in the LICENSE file.
+
+
+
+
+_______________ NO, BUT I MEAN, I HAVE NO IDEA OF HOW TO USE THIS! 
+                I NEED HELP!
+
+
+You can use the binary VSTi: http://github.com/sole/sorollet/downloads
+Currently there's only a build for 32 bit x86 Linux systems. 
+Let me know if it doesn't work in your system.
+
+If you want to contribute a build for Windows/Mac let me know too!
+
+If you want to make a 64k intro or something, and you're not a programmer,
+then look for one ;)
+
+Finally, if you have a general idea of how to program, these are the steps
+you would follow to use this in an intro:
+
+  1. Create the song with Renoise, using libsorollet_vsti as your only 
+     source of sounds (you can have several instruments/instances, of course).
+     But no samples or any other VSTi's.
+
+  2. Save the song
+  
+  3. Using the processor in src/player/process.py, convert the song file
+     to song.h
+  
+  4. Song.h contains a big float array with all the song data that the player
+     needs to replay it
+  
+  5. Have a look at the src/player/main.cpp file, which is a demonstration of
+     how to use the generated song.h file in a C++ program which plays audio
+     and draws some graphics using SDL+OpenGL.
+     
+     Hopefully that should be enough for you to get started on this.
+     
+     You can even use src/player/main.cpp as the basis for your 
+     intro/demo/whatever.
+     
+The code isn't totally optimised and it is surely missing some stuff which will
+be superimportant for your intro/demo. 
+So feel free to hack around, break and fix things! HAVE FUN!!
 
 
