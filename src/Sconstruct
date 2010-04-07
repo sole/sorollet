@@ -1,0 +1,22 @@
+
+core = Glob('./core/*.cpp') + ['sys/MathUtils.cpp']
+player = Glob('./player/*.cpp')
+
+### VSTi ###
+
+libenv = Environment()
+
+vsti = libenv.SharedLibrary(
+	'sorollet_vsti',
+	core + Glob('./vsti/*.cpp') + ['./libs/vst-sdk/public.sdk/source/vst2.x/audioeffect.cpp', './libs/vst-sdk/public.sdk/source/vst2.x/audioeffectx.cpp'],
+	CPPPATH = '#/libs/vst-sdk', CCFLAGS='-m32 -lstdc++', LINKFLAGS='-m32 -lstdc++'
+)
+
+### Stand-alone player ###
+player = Program('sorollet_player', core + player, CCFLAGS='-g', LINKFLAGS='-g', LIBS=['GL', 'SDL'])
+
+
+### Tests ###
+
+#voice_test = Program('sorollet_voice_test', core + ['./tests/sorollet_voice_test.cpp'], CCFLAGS='-g', LINKFLAGS='-g', LIBS=['GL', 'SDL'])
+#test_portaudio = Program('sorollet_test_portaudio', core + ['./tests/sorollet_test_portaudio.cpp'], CCFLAGS='-g', LINKFLAGS='-g', LIBS=['GL', 'SDL', 'portaudio'])

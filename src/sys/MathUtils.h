@@ -17,9 +17,15 @@ public:
     static float maxf(float value1, float value2);
     static float minf(float value1, float value2);
     static float randf();
-	static float clipf(float value, float minV, float maxV);
+    static float clipf(float value, float minV, float maxV);
     static int randSeed;
-    static long floor(double value);
+    //static long floor(double value);
+    //static float sin(float value);
+    //static float tan(float value);
+    //static float tanhyp(float value);
+    //static float fabs(float value);
+    //static float fmod(const float x, const float y);
+    //static float pow(const float x, const float y);
 };
 
 #ifndef M_PI

@@ -3,3 +3,10 @@ src/libs/vst-sdk/pluginterfaces/vst2.x/aeffect_original.h
 src/libs/vst-sdk/pluginterfaces/vst2.x/aeffectx.h
 src/libs/vst-sdk/pluginterfaces/vst2.x/vstfxstore.h
 src/libs/vst-sdk/public.sdk/
+src/libsorollet_vsti.so
+src/sorollet_voice_test
+src/sorollet_test_portaudio
+src/sorollet_player
+*.o
+*.os
+src/.sconsign.dblite

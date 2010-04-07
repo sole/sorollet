@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="62">
+  <logicalFolder name="root" displayName="root" projectFiles="true">
+    <df name="src" root="../src">
+      <df name="core">
+        <in>SorolletADSR.cpp</in>
+        <in>SorolletADSR.h</in>
+        <in>SorolletConstants.h</in>
+        <in>SorolletEQ.cpp</in>
+        <in>SorolletEQ.h</in>
+        <in>SorolletFilter.cpp</in>
+        <in>SorolletFilter.h</in>
+        <in>SorolletVoice.cpp</in>
+        <in>SorolletVoice.h</in>
+      </df>
+      <df name="libs">
+        <df name="vst-sdk">
+          <df name="pluginterfaces">
+            <df name="vst2.x">
+              <in>aeffect.h</in>
+              <in>aeffect_original.h</in>
+              <in>aeffectx.h</in>
+              <in>vstfxstore.h</in>
+            </df>
+          </df>
+          <df name="public.sdk">
+            <df name="samples">
+              <df name="vst2.x">
+                <df name="adelay">
+                  <df name="editor">
+                    <df name="resources">
+                    </df>
+                    <in>sdeditor.cpp</in>
+                    <in>sdeditor.h</in>
+                  </df>
+                  <df name="win">
+                  </df>
+                  <in>adelay.cpp</in>
+                  <in>adelay.h</in>
+                  <in>adelaymain.cpp</in>
+                  <in>surrounddelay.cpp</in>
+                  <in>surrounddelay.h</in>
+                </df>
+                <df name="again">
+                  <df name="source">
+                    <in>again.cpp</in>
+                    <in>again.h</in>
+                  </df>
+                  <df name="win">
+                  </df>
+                </df>
+                <df name="mac">
+                  <df name="vst 2.4 examples.xcodeproj">
+                  </df>
+                </df>
+                <df name="minihost">
+                  <df name="source">
+                    <in>minieditor.cpp</in>
+                    <in>minihost.cpp</in>
+                  </df>
+                  <df name="win">
+                  </df>
+                </df>
+                <df name="vstxsynth">
+                  <df name="resource">
+                  </df>
+                  <df name="source">
+                    <in>gmnames.h</in>
+                    <in>vstxsynth.cpp</in>
+                    <in>vstxsynth.h</in>
+                    <in>vstxsynthproc.cpp</in>
+                  </df>
+                  <df name="win">
+                  </df>
+                </df>
+                <df name="win">
+                </df>
+                <df name="win.vc2003">
+                </df>
+                <df name="win.vc6">
+                </df>
+              </df>
+            </df>
+            <df name="source">
+              <df name="vst2.x">
+                <in>aeffeditor.h</in>
+                <in>audioeffect.cpp</in>
+                <in>audioeffect.h</in>
+                <in>audioeffectx.cpp</in>
+                <in>audioeffectx.h</in>
+                <in>vstplugmain.cpp</in>
+              </df>
+            </df>
+          </df>
+        </df>
+      </df>
+      <df name="player">
+        <df name="data">
+          <in>song.h</in>
+        </df>
+        <in>SorolletDeviceAutomation.cpp</in>
+        <in>SorolletDeviceAutomation.h</in>
+        <in>SorolletEnvelope.cpp</in>
+        <in>SorolletEnvelope.h</in>
+        <in>SorolletPattern.cpp</in>
+        <in>SorolletPattern.h</in>
+        <in>SorolletPatternCell.cpp</in>
+        <in>SorolletPatternCell.h</in>
+        <in>SorolletPlayer.cpp</in>
+        <in>SorolletPlayer.h</in>
+        <in>SorolletPlayerEvent.cpp</in>
+        <in>SorolletPlayerEvent.h</in>
+        <in>main.cpp</in>
+      </df>
+      <df name="sys">
+        <in>MathUtils.cpp</in>
+        <in>MathUtils.h</in>
+        <in>MemUtils.cpp</in>
+        <in>MemUtils.h</in>
+      </df>
+      <df name="tests">
+        <in>sorollet_test_portaudio.cpp</in>
+        <in>sorollet_voice_test.cpp</in>
+      </df>
+      <df name="vsti">
+        <in>SorolletVSTi.cpp</in>
+        <in>SorolletVSTi.h</in>
+        <in>SorolletVSTiProgram.cpp</in>
+        <in>SorolletVSTiProgram.h</in>
+        <in>main.cpp</in>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false">
+      <itemPath>../src/Makefile</itemPath>
+      <itemPath>nb-sorollet-Makefile.mk</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>../src</Elem>
+  </sourceRootList>
+  <projectmakefile>nb-sorollet-Makefile.mk</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <compilerSet>GNU|GNU</compilerSet>
+        <platform>2</platform>
+      </toolsSet>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>../src</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+        </makeTool>
+      </makefileType>
+      <folder path="src/libs">
+        <ccTool>
+          <incDir>
+            <pElem>../src/libs/vst-sdk</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="src/vsti">
+        <ccTool>
+          <incDir>
+            <pElem>../src/libs/vst-sdk</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+    </conf>
+    <conf name="sorollet_voice_test" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <compilerSet>GNU|GNU</compilerSet>
+        <platform>2</platform>
+      </toolsSet>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>../src</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath>../src/sorollet_voice_test</executablePath>
+        </makeTool>
+      </makefileType>
+      <folder path="src/libs">
+        <ccTool>
+          <incDir>
+            <pElem>../src/libs/vst-sdk</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="src/vsti">
+        <ccTool>
+          <incDir>
+            <pElem>../src/libs/vst-sdk</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+    </conf>
+    <conf name="sorollet_player" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <compilerSet>GNU|GNU</compilerSet>
+        <platform>2</platform>
+      </toolsSet>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>../src</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath>../src/sorollet_player</executablePath>
+        </makeTool>
+      </makefileType>
+      <folder path="src/libs">
+        <ccTool>
+          <incDir>
+            <pElem>../src/libs/vst-sdk</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="src/vsti">
+        <ccTool>
+          <incDir>
+            <pElem>../src/libs/vst-sdk</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+    </conf>
+  </confs>
+</configurationDescriptor>
